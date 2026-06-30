@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kris Vanna | VFX Artist</title>
+<title>Kris Vanna | 3D Animator & VFX Artist</title>
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230A0A0F'/%3E%3Ctext x='32' y='40' font-family='Arial, sans-serif' font-size='24' font-weight='800' fill='%2320B2AA' text-anchor='middle'%3EKV%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -180,7 +180,7 @@
     transition: opacity 1.5s ease-in-out;
   }
   .hero-slide.active {
-    opacity: 0.4; /* dim image to make text readable */
+    opacity: 0.4;
   }
   .hero-overlay {
     position: absolute;
@@ -420,7 +420,6 @@
     border-color: var(--theme);
   }
 
-  /* Full-bleed image */
   .project-img-wrapper {
     position: absolute;
     inset: 0;
@@ -439,7 +438,6 @@
     transform: scale(1.05);
   }
 
-  /* Text overlay at bottom center */
   .project-overlay {
     position: absolute;
     inset: 0;
@@ -479,7 +477,6 @@
     margin-bottom: 0.8rem;
   }
 
-  /* Software pill circles */
   .project-tags {
     display: flex;
     flex-wrap: wrap;
@@ -801,11 +798,45 @@
     *, *::before, *::after { animation: none !important; transition: none !important; }
     .reveal { opacity: 1; transform: none; }
   }
+
+  /* ── DOWNLOAD BUTTON CSS ── */
+  .btn-download {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-top: 2.5rem;
+    padding: 0.8rem 1.8rem;
+    background: transparent;
+    color: var(--theme);
+    border: 1px solid var(--theme);
+    border-radius: 999px;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 600;
+    font-size: 0.85rem;
+    letter-spacing: 0.03em;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all 0.3s var(--ease-apple);
+    opacity: 0;
+    animation: fadeUp 1s ease 1.2s forwards;
+    width: fit-content;
+  }
+
+  .btn-download:hover {
+    background: var(--theme);
+    color: var(--bg);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px var(--theme-dim);
+  }
+
+  .btn-download svg {
+    width: 18px;
+    height: 18px;
+  }
 </style>
 </head>
 <body>
 
-<!-- NAV -->
 <nav id="mainNav">
   <a href="#main" class="nav-logo">KV</a>
   <ul class="nav-links">
@@ -822,7 +853,6 @@
   </button>
 </nav>
 
-<!-- HERO -->
 <section id="main">
   <div class="hero-slider-bg" id="heroSlider">
       <img src="godzilla.png" class="hero-slide active" alt="Godzilla Background">
@@ -832,16 +862,23 @@
   </div>
   <div class="hero-overlay"></div>
   
-  <p class="hero-label">VFX Artist &nbsp;/&nbsp; Camera Matchmove &nbsp;/&nbsp; Rotomation</p>
+  <p class="hero-label">3D Animator &nbsp;/&nbsp; VFX Artist</p>
   <h1 class="hero-name">Kris<br><em>Vanna</em></h1>
-  <p class="hero-tagline">VFX artist specializing in camera matchmoving and rotomation, bringing technical precision to international productions.</p>
+  <p class="hero-tagline">3D Animator and VFX artist with a strong foundation in body mechanics and realistic motion dynamics, bringing technical precision to international productions.</p>
+  <a href="Resume_CV.pdf" download="Resume_CV.pdf" class="btn-download reveal">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+      <polyline points="7 10 12 15 17 10"></polyline>
+      <line x1="12" y1="15" x2="12" y2="3"></line>
+    </svg>
+    Download CV
+  </a>
   <div class="hero-scroll">
     <span>Scroll</span>
     <div class="scroll-line"></div>
   </div>
 </section>
 
-<!-- ABOUT -->
 <section id="about">
   <div class="section-header reveal">
     <span class="section-label">01</span>
@@ -854,7 +891,7 @@
     </div>
     <div class="about-bio reveal">
       <p>
-        I'm <strong>Krissada Wannawanna</strong>, a VFX artist based in Thailand specializing in <strong>camera matchmoving</strong> and <strong>rotomation</strong>. I've contributed to Hollywood-scale productions at <strong>Yannix</strong>, one of Asia's leading post-production studios, working on both released titles and upcoming international films.
+        I'm <strong>Krissada Wannawanna</strong>, a <strong>3D Animator</strong> and VFX artist based in Thailand. Through my experience in <strong>rotomation</strong> and camera matchmoving, I have developed a deep understanding of <strong>body mechanics</strong> and <strong>realistic motion dynamics</strong>. I've contributed to Hollywood-scale productions at <strong>Yannix</strong>, one of Asia's leading post-production studios, working on both released titles and upcoming international films.
       </p>
       <br>
       <p>
@@ -864,7 +901,6 @@
   </div>
 </section>
 
-<!-- EXPERIENCE -->
 <section id="experience">
   <div class="section-header reveal">
     <span class="section-label">02</span>
@@ -893,7 +929,7 @@
       </div>
       <div>
         <div class="exp-role">Internship<br><em style="font-size:1.1rem;color:var(--theme);">Rotomation Artist</em></div>
-        <p class="exp-desc">Worked on multiple international film productions across various stages of post-production. Responsible for rotomating characters, creatures, and hard-surface objects with a focus on realistic animation principles, precise motion matching, and studio-level quality standards.</p>
+        <p class="exp-desc">Worked on multiple international film productions across various stages of post-production. Responsible for rotomating characters, creatures, and hard-surface objects. Through this role, I developed a profound understanding of body mechanics, weight distribution, and realistic motion dynamics by accurately recreating live-action movements frame-by-frame, ensuring studio-level quality standards.</p>
       </div>
     </div>
 
@@ -912,7 +948,6 @@
   </div>
 </section>
 
-<!-- EDUCATION -->
 <section id="education">
   <div class="section-header reveal">
     <span class="section-label">03</span>
@@ -948,7 +983,6 @@
   </div>
 </section>
 
-<!-- SKILLS -->
 <section id="skills">
   <div class="section-header reveal">
     <span class="section-label">04</span>
@@ -996,7 +1030,6 @@
   </div>
 </section>
 
-<!-- PROJECTS -->
 <section id="projects">
   <div class="section-header reveal">
     <span class="section-label">05</span>
@@ -1005,7 +1038,6 @@
   </div>
   <div class="projects-grid">
   
-    <!-- Project 1: GODZILLA -->
     <div class="project-card reveal" onclick="openModal('modal-godzilla')">
       <div class="project-img-wrapper">
           <img src="GZ_thumbnail.jpg" alt="Godzilla The Vengeance">
@@ -1022,7 +1054,6 @@
       </div>
     </div>
 
-    <!-- Project 2: PANTHEON -->
     <div class="project-card reveal" onclick="openModal('modal-pantheon')">
       <div class="project-img-wrapper">
           <img src="pantheon.jpg" alt="Pantheón Santa Cecilia">
@@ -1037,7 +1068,6 @@
       </div>
     </div>
     
-    <!-- Project 3: WHALE -->
     <div class="project-card reveal" onclick="openModal('modal-whale')">
       <div class="project-img-wrapper">
           <img src="whale.jpg" alt="Well, Whale">
@@ -1052,7 +1082,6 @@
       </div>
     </div>
 
-    <!-- Placeholder Project -->
     <div class="project-card reveal" style="border:1px dashed var(--border); background:transparent; box-shadow:none; cursor:default;">
       <div class="project-overlay" style="background:transparent; justify-content:center;">
         <div class="project-name" style="color:var(--border);">Coming Soon</div>
@@ -1063,7 +1092,6 @@
   </div>
 </section>
 
-<!-- CONTACT -->
 <section id="contact">
   <div class="contact-inner">
     <h2 class="contact-title reveal">Let's work<br><em>together.</em></h2>
@@ -1088,7 +1116,6 @@
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
   <p>© 2026 Kris Vanna. All Rights Reserved.</p>
   <div style="display:flex; align-items:center; gap:1.2rem;">
@@ -1099,11 +1126,9 @@
       <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5.02 3.66 9.18 8.44 9.94v-7.03H7.9v-2.91h2.54V9.79c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.23.2 2.23.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.87h2.78l-.44 2.91h-2.34V22c4.78-.76 8.44-4.92 8.44-9.94z"/></svg>
     </a>
   </div>
-  <p>VFX Artist · Matchmove · Rotomation</p>
+  <p>3D Animator · VFX Artist</p>
 </footer>
 
-<!-- MODALS -->
-<!-- Godzilla Modal -->
 <div class="modal-overlay" id="modal-godzilla">
     <div class="modal-content">
         <button class="modal-close" onclick="closeModal('modal-godzilla')">&#x2715;</button>
@@ -1148,7 +1173,6 @@
     </div>
 </div>
 
-<!-- Pantheon Modal -->
 <div class="modal-overlay" id="modal-pantheon">
     <div class="modal-content">
         <button class="modal-close" onclick="closeModal('modal-pantheon')">&#x2715;</button>
@@ -1189,7 +1213,6 @@
     </div>
 </div>
 
-<!-- Whale Modal -->
 <div class="modal-overlay" id="modal-whale">
     <div class="modal-content">
         <button class="modal-close" onclick="closeModal('modal-whale')">&#x2715;</button>
@@ -1230,7 +1253,6 @@
     </div>
 </div>
 
-<!-- ── CHAT WIDGET ── -->
 <style>
   .chat-widget-btn {
     position: fixed;
